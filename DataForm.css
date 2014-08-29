@@ -1,0 +1,737 @@
+﻿/*******************************************************************************
+* ФОРМА ВВОДА И ОТОБРАЖЕНИ ИНФОРМАЦИИ
+*******************************************************************************/
+.form
+{
+	height: 100%;
+	width: 100%;
+	/*overflow-y: auto;
+	overflow-x: hidden;*/
+	/* Т.к. в IE6-7 при прокрутке страницы дочерние relative-элементы остаются прилипшими
+	и перемещаются вместе с полосой прокуртки */
+	*position: relative;
+}
+
+.form .form_data
+{
+	padding: 0 20px 30px 20px;
+}
+.form .form_data .form_control
+{
+	padding: 10px 0 0 0;
+	margin: 0;
+	/* Т.к. в IE6-7 мы определили для .form свойсто position-relative, то
+	необходимо указать его для всех контролов. В противном случе, могут возникнуть
+	перекрытия и т.п.
+	Смысл в том, что родителю, на который навели мышью, присваиваем z-index больше, 
+	чем у остальных контролов. */
+	*width: 100%;
+	*position: relative;
+	/*** end ***/
+}
+.form .form_data .form_control.disabled
+{
+	color: #AAAAAA !important;
+}
+.form .form_data .form_control.disabled input
+{
+	color: #AAAAAA !important;
+}
+.form .form_data .form_control_error
+{
+	color: #D00;
+}
+/******** form_control_groupbox ********/
+.form .form_data .form_control_groupbox
+{
+	clear: both;
+}
+.form .form_data .form_control_groupbox .form_control_groupbox_title
+{
+	border-bottom: 1px solid #845BA1;
+    padding: 0 0 5px;
+    font-weight: bold;
+    color: #845BA1;
+}
+.form .form_data .form_control_groupbox .form_control_groupbox_data
+{
+	border: none;
+	padding: 0 10px;
+}
+.form .form_data .form_control.disabled .form_control_groupbox_title
+{
+	color: #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+}
+/******** form_control_groupbox ********/
+.form .form_data .form_control_panel
+{
+	margin-top: 0;
+	clear: both;
+}
+.form .form_data .form_control_panel .form_control_panel_item
+{
+	float: left;
+}
+.form .form_data .form_control_panel .form_control_panel_item_wrapper
+{
+	margin-left: 10px;
+}
+.form .form_data .form_control_panel .form_control_panel_item_wrapper.first
+{
+	margin-left: 0;
+}
+/******** form_control_listview ********/
+.form .form_data .form_control_listview
+{
+	height: 200px;
+	position: relative;
+}
+.form .form_data .form_control_listview .disabler
+{
+	z-index: 10;
+	position: absolute;
+	background: none;
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+.form .form_data .form_control_listview .buttons
+{
+	width: 100px;
+	padding: 0 0 0 10px;
+	float: right;
+}
+.form .form_data .form_control_listview .buttons button
+{
+	margin: 0 0 10px 0;
+}
+.form .form_data .form_control_listview .table
+{
+	margin: 0;
+	height: 100%;
+}
+.form .form_data .form_control_listview .table_wrapper .table
+{
+	margin-right: 110px;
+}
+.form .form_data .form_control_listview .table_wrapper
+{
+	height: 100%;
+	width: 100%;
+	float: left;
+	margin-right: -110px;
+}
+.form .form_data .form_control_listview .data_table
+{
+	color: #845BA1;
+}
+.form .form_data .form_control_listview .data_table .data_table_body
+{
+	background: #FFFFFF;
+}
+.form .form_data .form_control_listview .data_table .data_table_content
+{
+	border: 1px solid #845BA1;
+}
+.form .form_data .form_control_listview.disabled .data_table .data_table_content
+{
+	border: 1px solid #AAAAAA;
+}
+.form .form_data .form_control_listview.disabled .data_table .data_table_body
+{
+	background: #F0F0F0;
+}
+.form .form_data .form_control_listview.disabled .data_table .data_table_header 
+{
+	border-color: #AAAAAA;
+}
+.form .form_data .form_control_listview.disabled button
+{
+	border: 1px solid #AAAAAA;
+	color: #AAAAAA;
+	background: #F0F0F0;
+	cursor: default;
+}
+.form .form_data .form_control_listview.disabled input
+{
+	cursor: default;
+}
+.form .form_data .form_control_listview.disabled .data_table
+{
+	color: #AAAAAA !important;
+}
+.form .form_data .form_control_listview.disabled .data_table .data_table_header
+{
+	background: #AAAAAA;
+}
+/******** form_control_label ********/
+.form .form_data .form_control_label
+{
+}
+.form .form_data .form_control_label_out
+{
+	line-height: 16px;
+}
+
+/******** form_control_namevalue ********/
+.form .form_data .form_control_namevalue
+{	
+}
+.form .form_data .form_control_namevalue .form_control_namevalue_item
+{
+    padding: 5px;
+	background-color: #F0F0F0;
+	border: solid #AAAAAA;
+	border-width: 0px 1px 1px 1px; 
+}
+.form .form_data .form_control_namevalue .form_control_namevalue_item.first
+{
+	border-width: 1px;
+}
+.form .form_data .form_control_namevalue .form_control_namevalue_item_value
+{
+	height: 16px;
+	line-height: 16px;
+	float: right;
+	name: 
+}
+.form .form_data .form_control_namevalue .form_control_namevalue_item_name
+{
+	height: 16px;
+	line-height: 16px;
+	float: left;
+}
+
+/******** form_control_combobox ********/
+.form .form_data .form_control_combobox .form_control_combobox_caption
+{
+	padding-bottom: 5px;
+}
+.form .form_data .form_control_combobox .form_control_combobox_value
+{
+	float: left;
+	width: 100%;
+}
+.form .form_data .form_control_combobox .form_control_combobox_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 7px 0px;
+}
+.form .form_data .form_control_combobox .form_control_combobox_button 
+{
+	float: right;
+}
+.form .form_data .form_control_combobox .form_control_combobox_button button
+{
+	width: 100%;
+}
+/******** form_control_date ********/
+.form .form_data .form_control_date .form_control_date_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 7px 0px;
+}
+.form .form_data .form_control_date .form_control_date_value
+{
+	float: left;
+	width: 100%;
+}
+/******** form_control_time ********/
+.form .form_data .form_control_time .form_control_time_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 7px 0px;
+}
+.form .form_data .form_control_time .form_control_time_value
+{
+	float: left;
+	width: 100%;
+}
+.form .form_data .form_control_time .form_control_time_splitter
+{
+	text-align: center;
+	width: 7px;
+	float: left;
+	line-height: 28px;
+	padding: 0 10px;
+	font-weight: bold;
+}
+.form .form_data .form_control_time .form_control_time_hours_label
+{
+	
+}
+.form .form_data .form_control_time .form_control_time_minutes_label
+{
+	
+}
+.form .form_data .form_control_time .us_select
+{
+	width: 100px;
+	float: left;
+} 
+
+/******** form_control_period ********/
+.form .form_data .form_control_period .form_control_period_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 7px 0px;
+}
+.form .form_data .form_control_period .form_control_period_value
+{
+	float: left;
+	width: 100%;
+}
+.form .form_data .form_control_period .form_control_period_value .dp_input
+{
+	float: left;
+	margin-right: 10px;
+}
+/******** form_control_checkbox ********/
+.form .form_data .form_control_checkbox label
+{
+	cursor: pointer;
+}
+.form .form_data .form_control_checkbox i
+{
+	display: block;
+	_display: none;
+	float: left;
+	font-size: 14px;
+	position: relative;
+	top: 1px;
+	width: 16px;
+}
+.form .form_data .form_control_checkbox.checked label
+{
+	_color: #FFFFFF;
+	_background: #845BA1;
+}
+.form .form_data .form_control_checkbox:hover i
+{
+}
+.form .form_data .form_control_checkbox.disabled label,
+.form .form_data .form_control_checkbox.disabled i
+{
+	cursor: default;
+	color: #AAAAAA;
+}
+.form .form_data .form_control_checkbox input
+{
+	height: 13px;
+	width: 13px;
+	padding: 0px;
+	margin: 0px 5px 1px 0px;
+	vertical-align: bottom;
+}
+
+/******** form_control_radio ********/
+.form .form_data .form_control_radio label
+{
+	cursor: pointer;
+}
+.form .form_data .form_control_radio input
+{
+	height: 13px;
+	width: 13px;
+	padding: 0px;
+	margin: 0px 5px 0px 0px;
+	vertical-align: bottom;
+}
+
+/******** form_control_textbox ********/
+.form .form_data .form_control_textbox .form_control_textbox_caption
+{
+	padding-bottom: 5px;
+}
+.form .form_data .form_control_textbox .form_control_textbox_value
+{
+	float: left;
+	width: 100%;
+}
+.form .form_data .form_control_textbox .form_control_textbox_wrapper
+{
+    padding: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid #AAAAAA;
+}
+.form .form_data .form_control_textbox.focus .form_control_textbox_wrapper
+{
+	border: 1px solid #845BA1;
+}
+.form .form_data .form_control_textbox.disabled .form_control_textbox_wrapper
+{
+	background-color: #F0F0F0;
+}
+.form .form_data .form_control_textbox .form_control_textbox_value input
+{
+	background-color: #FFFFFF;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	font: 12px Tahoma,Arial,Helvetica,sans-serif;
+}
+.form .form_data .form_control_textbox.disabled .form_control_textbox_value input
+{
+	background-color: #F0F0F0;
+}
+.form .form_data .form_control_textbox .form_control_textbox_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 7px 0px;
+}
+.form .form_data .form_control_textbox .form_control_textbox_button 
+{
+	float: right;
+}
+.form .form_data .form_control_textbox .form_control_textbox_button button
+{
+	width: 100%;
+}
+/******** form_control_stextbox ********/
+.form .form_data .form_control_stextbox
+{
+	position: relative;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_caption
+{
+	padding-bottom: 5px;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_value
+{
+	float: left;
+	width: 100%;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_wrapper
+{
+    padding: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid #AAAAAA;
+}
+.form .form_data .form_control_stextbox.focus .form_control_stextbox_wrapper
+{
+	border: 1px solid #845BA1;
+}
+.form .form_data .form_control_stextbox.disabled .form_control_stextbox_wrapper
+{
+	background-color: #F0F0F0;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_value input
+{
+	background-color: #FFFFFF;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	font: 12px Tahoma,Arial,Helvetica,sans-serif;
+}
+.form .form_data .form_control_stextbox.disabled .form_control_stextbox_value input
+{
+	background-color: #F0F0F0;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 7px 0px;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_button 
+{
+	float: right;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_button button
+{
+	width: 100%;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_memory
+{
+	display: none;
+	border: none;
+	background: #FFFFFF;
+	
+	/*top: 27px;*/
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	z-index: 3;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_memory_item
+{
+	display: none;
+	cursor: pointer;
+	border-left: 1px solid #AAAAAA;
+	border-right: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+	padding: 5px;
+}
+.form .form_data .form_control_stextbox .form_control_stextbox_memory_item.slctd,
+.form .form_data .form_control_stextbox .form_control_stextbox_memory_item.hover
+{
+	background: #F0F0F0;
+}
+
+/******** form_control_progress ********/
+.form .form_data .form_control_progress 
+{
+	
+}
+.form .form_data .form_control_progress .form_control_progress_info
+{
+	line-height: 20px;	
+}
+.form .form_data .form_control_progress .form_control_progress_info_status
+{
+	margin: 0 5px 0 0;
+}
+.form .form_data .form_control_progress .form_control_progress_info_percent
+{
+	color: #845BA1;
+	font-weight: bold;
+}
+.form .form_data .form_control_progress .form_control_progress_bar
+{
+	background: #FFFFFF;
+	height: 26px;
+	border: 1px solid #845BA1;
+}
+.form .form_data .form_control_progress .form_control_progress_bar_percent
+{
+	height: 26px;
+	width: 0;
+	background: #845BA1;
+}
+
+/******** form_control_line ********/
+.form .form_data .form_control_line 
+{
+	border-bottom: 1px solid #845BA1;
+	height: 10px;
+}
+/******** form_control_number ********/
+.form .form_data .form_control_number .form_control_number_caption
+{
+	padding-bottom: 5px;
+}
+.form .form_data .form_control_number .form_control_number_value
+{
+	float: left;
+	width: 100%;
+}
+.form .form_data .form_control_number .form_control_number_wrapper
+{
+    padding: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid #AAAAAA;
+}
+.form .form_data .form_control_number.focus .form_control_number_wrapper
+{
+	border: 1px solid #845BA1;
+}
+.form .form_data .form_control_number.disabled .form_control_number_wrapper
+{
+	background-color: #F0F0F0;
+}
+.form .form_data .form_control_number .form_control_number_value input
+{
+	background-color: #FFFFFF;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	font: 12px Tahoma,Arial,Helvetica,sans-serif;
+}
+.form .form_data .form_control_number.disabled .form_control_number_value input
+{
+	background-color: #F0F0F0;
+}
+.form .form_data .form_control_number .form_control_number_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 7px 0px;
+}
+.form .form_data .form_control_number .form_control_number_button 
+{
+	float: right;
+}
+.form .form_data .form_control_number .form_control_number_button button
+{
+	width: 100%;
+}
+/******** form_control_fileload ********/
+.form .form_data .form_control_fileload
+{
+	
+}
+.form .form_data .form_control_fileload .form_control_fileload_caption
+{
+	padding-bottom: 5px;
+	float: left;
+}
+.form .form_data .form_control_fileload .form_control_fileload_status
+{
+	float: right;
+	color: #008800;
+}
+.form .form_data .form_control_fileload .form_control_fileload_status.error
+{
+	color: #DD0000;
+}
+.form .form_data .form_control_fileload .form_control_fileload_value
+{
+	float: left;
+	width: 100%;
+	margin-right: -90px;
+}
+.form .form_data .form_control_fileload .form_control_fileload_wrapper
+{
+    padding: 5px;
+    height: 16px;
+    line-height: 16px;
+	background-color: #FFFFFF;
+	border: 1px solid #AAAAAA;
+	margin-right: 90px;
+}
+.form .form_data .form_control_fileload .form_control_fileload_button
+{
+	width: 80px;
+	float: right;
+}
+.form .form_data .form_control_fileload .form_control_fileload_button button
+{
+	width: 100%;
+}
+
+.form .form_data .form_control_fileload .form_control_fileload_content_input
+{
+	float: left;
+	margin-right: -110px;
+	width: 100%;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_wrapper
+{
+	border: 1px solid #AAAAAA;
+	background: #FFFFFF;
+	padding: 5px;
+	margin-right: 110px;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_input .customfile
+{
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_input .customfile-button 
+{
+	float: right;
+	font-size: 14px;
+	height: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	text-align: center;
+	width: 25px;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_input .customfile-feedback 
+{
+	display: block;
+	line-height: 18px;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_submit
+{
+	width: 100px;
+	float: right;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_submit input
+{
+	background: #FFFFFF;
+	border: 1px solid #AAAAAA;
+	color: #845BA1;
+	cursor: pointer;
+	font: bold 12px Tahoma,Arial,Helvetica,sans-serif;
+	margin: 0;
+	outline: medium none;
+	overflow: hidden;
+	width: 100%;
+	height: 30px;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_submit input.disabled
+{
+	cursor: default;
+	border: 1px solid #AAAAAA;
+	color: #AAAAAA;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_submit input.hover
+{
+	border: 1px solid #845BA1;
+}
+.form .form_data .form_control_fileload .form_control_fileload_content_input .customfile-input
+{
+	background: transparent;
+	border: 0px;
+	cursor: pointer;
+	height: 100px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	z-index: 1;
+}
+.form .form_data .form_control_fileload .form_control_fileload_process
+{
+	background: #FFFFFF;
+	margin-top: 5px;
+	height: 5px;
+	border: 1px solid #845BA1;
+}
+.form .form_data .form_control_fileload .form_control_fileload_process_value
+{
+	width: 0%;
+	height: 5px;
+	background: #845BA1;
+}
+/******** form_command ********/
+.form .form_command
+{
+	border-top: 1px solid #845BA1;
+	padding: 10px;
+}
+.form .form_command_button
+{
+	margin-right: 10px;
+	float: left;
+	width: 100px;
+}
+.form .form_command_button button
+{
+	margin: 0;
+	width: 100%;
+}
+.form .form_command_button.accept button
+{
+}
+.form .form_command_button.cancel
+{
+	width: auto;
+}
+.form .form_command_button.cancel button
+{
+	width: auto;
+	border: none;
+	background: none;
+	outline: none;
+}
+.form .form_command_button.cancel button:hover
+{
+	text-decoration: underline;
+}
