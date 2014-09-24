@@ -1,0 +1,121 @@
+﻿.us_clear
+{
+	clear: both;
+}
+.us_select
+{
+	/* Т.к. в IE6, если не установить ширину relative блока, то
+	его дочерние элементы будут позиционироваться относительно начала экрана */
+	_width: 100%;
+	/* Т.к. в IE6, z-index абсолютного блока не учитывается, а учитывается 
+	z-index его relative-родителя (см .us_opened) */
+	/*_z-index: 2;*/
+	/* Т.к. выпадающий список позиционируется относительного этого эелемента */
+	position: relative;
+	cursor: pointer;
+	border-top: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+	background: #FFFFFF;
+}
+.us_select.us_opened
+{
+	border-top: 1px solid #845BA1;
+	border-bottom: 1px solid #845BA1;
+}
+.us_select.disabled
+{
+	color: #AAAAAA;
+	cursor: default;
+}
+.us_select.us_opened
+{
+	/*_z-index: 3;*/
+}
+.us_select .us_select_value
+{
+	/* В IE6 дочерний элемент для .us_select_value не сжимался,
+	и выводился по содержимому */
+	_overflow: hidden;
+	_white-space: nowrap;
+	_text-overflow: ellipsis;
+	
+	float: left;
+	width: 100%;
+	position: relative;
+	margin-right: -30px;
+}
+.us_select.disabled .us_select_value
+{
+	background: #FAFAFA;
+}
+.us_select .us_select_value .us_select_wrapper
+{
+	margin-right: 30px;
+	border-left: 1px solid #AAAAAA;
+}
+.us_select.us_opened .us_select_value .us_select_wrapper
+{
+	border-left: 1px solid #845BA1;
+}
+.us_select .us_select_value .us_select_wrapper .us_select_out
+{
+	line-height: 18px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 5px 0px 5px 5px; 
+}
+.us_select .us_select_button
+{
+	color: #845BA1;
+	text-align: center;
+	float: right;
+	line-height: 28px;
+	width: 28px;
+	position: relative;
+	border-right: 1px solid #AAAAAA;
+}
+.us_select.disabled .us_select_button
+{
+	color: #AAAAAA;
+}
+.us_select.us_opened .us_select_button
+{
+	border-right: 1px solid #845BA1;
+}
+.us_select .us_select_options
+{
+	top: 29px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	z-index: 3;
+	display: none;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	border-bottom: 1px solid #845BA1;
+}
+.us_select .us_select_options .us_select_option
+{
+	height: 16px;
+	line-heihgt: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	border-left: 1px solid #845BA1;
+	border-right: 1px solid #845BA1;
+	border-bottom: 1px solid #AAAAAA;
+	background: #FFFFFF;
+	padding: 5px;
+}
+.us_select .us_select_options .us_select_option.last
+{
+	border-bottom: none;
+}
+.us_select .us_select_options .us_select_option_hover,
+.us_select .us_select_options .us_select_option_selected
+{
+	background: #FAFAFA;
+}

@@ -1,0 +1,185 @@
+﻿/*******************************************************************************
+ * ЭЛМЕНТ УПРАВЛЕНИ КАЛЕНДАРЬ 
+ *******************************************************************************/
+.dp_input
+{
+	position: relative;
+	z-index: 2;
+	width: 227px;
+}
+.dp_input.disabled
+{
+	color: #888888;
+}
+.dp_input.dp_opened
+{
+	z-index: 3;
+}
+.dp_input .dp_input_value
+{
+	cursor: pointer;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-right: -30px;
+	float: left;
+	width: 100%;
+	border-top: 1px solid #AAAAAA;
+	border-bottom: 1px solid #AAAAAA;
+}
+.dp_input.disabled .dp_input_value
+{
+	cursor: default;	
+}
+.dp_input .dp_input_value .dp_input_wrapper
+{
+	width: auto;
+	border-left: 1px solid #AAAAAA;
+	margin-right: 30px;
+}
+.dp_input .dp_input_value .dp_input_wrapper .dp_input_out
+{
+	line-height: 16px;
+	height: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	padding: 5px 0px 5px 5px;
+	background: #FFFFFF;
+}
+.dp_input.disabled .dp_input_value .dp_input_wrapper .dp_input_out
+{
+	background: #FAFAFA;
+}
+.dp_input .dp_input_value_hover .dp_input_wrapper .dp_input_out
+{
+	background: #FAFAFA;
+}
+.dp_input .dp_input_value .dp_input_wrapper .dp_input_out_hover
+{
+	font-weight: bold;
+}
+.dp_input .dp_input_button
+{
+	border: 1px solid #AAAAAA;
+	border: 1px solid #AAAAAA;
+    float: right;
+    padding: 5px 0;
+	line-height: 16px;
+    position: relative;
+    text-align: center;
+    width: 28px;
+    background: #FFFFFF;
+}
+.dp_input.disabled .dp_input_button
+{
+	background: #FAFAFA;
+}
+.dp_input .dp_input_button_hover
+{
+	font-weight: bold;
+	cursor: pointer;
+}
+.dp_calendar
+{
+	z-index: 3;
+	display: none;
+	position: absolute;
+	float: left;
+	background-color: #AAAAAA !important;
+}
+.dp_calendar table
+{
+	border-spacing: 1px;
+	border-collapse: inherit;
+}
+.dp_calendar tr
+{
+	height: 26px;
+    line-height: 26px;
+}
+.dp_calendar td
+{
+	margin: 0;
+	padding: 0;
+	width: 30px;
+	text-align: center;
+}
+.dp_calendar_prevnext
+{
+	color: #222222;
+	background: #FFFFFF;
+}
+.dp_calendar_prevnext_hover
+{
+	cursor: pointer;
+	background: #FFFFFF;
+}
+.dp_calendar_monyear
+{
+	background: #FFFFFF;
+	color: #222222;
+}
+.dp_calendar_dow
+{
+	background-color: #845BA1;
+	color: #FAFAFA;
+}
+.dp_calendar_day
+{
+	font-weight: bold;
+	background-color: #FFFFFF;
+	color: #333333;
+	border: 1px solid #FFFFFF;
+}
+.dp_calendar_day_hover
+{
+	font-weight: bold;
+	background-color: #FFFFFF;
+	color: #845BA1;
+	border: 1px solid #845BA1;
+	cursor: pointer;
+}
+.dp_calendar_selected
+{
+	font-weight: bold;
+	background-color: #BFA5D2;
+	color: #222222;
+	border: 1px solid #845BA1;
+}
+.dp_calendar_today
+{
+	font-weight: bold;
+	background-color: #845BA1;
+	color: #FFFFFF;
+	border: 1px solid #845BA1;
+}
+.dp_calendar_today_hover
+{
+	font-weight: bold;
+	background-color: #FFFFFF;
+	color: #845BA1;
+	border: 1px solid #845BA1;
+	cursor: pointer;
+}
+.dp_calendar_sat, .dp_calendar_sun
+{
+	font-weight: bold;
+	background-color: #FFFFFF;
+	color: #845BA1;
+	border: 1px solid #FFFFFF;
+}
+.dp_calendar_sat_hover, .dp_calendar_sun_hover
+{
+	font-weight: bold;
+	background-color: #FFFFFF;
+	color: #845BA1;
+	border: 1px solid #845BA1;
+	cursor: pointer;
+}
+.dp_calendar_noday
+{
+	background-color: #FFFFFF;
+	color: #AAAAAA;
+	cursor: default;
+}

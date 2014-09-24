@@ -1,0 +1,192 @@
+/*руа*/
+/******** df_control_date ********/
+.df .df_data .df_control_date .df_control_date_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 6px 0px;
+}
+.df .df_data .df_control_date .df_control_date_value
+{
+	float: left;
+	width: 100%;
+}
+/******** df_control_time ********/
+.df .df_data .df_control_time .df_control_time_label
+{
+	cursor: pointer;
+	float: left;
+	padding: 6px 0px;
+}
+.df .df_data .df_control_time .df_control_time_value
+{
+	float: left;
+	width: 100%;
+}
+.df .df_data .df_control_time .df_control_time_splitter
+{
+	text-align: center;
+	width: 7px;
+	float: left;
+	line-height: 28px;
+	padding: 0 10px;
+	font-weight: bold;
+}
+.df .df_data .df_control_time .df_control_time_hours_label
+{
+	
+}
+.df .df_data .df_control_time .df_control_time_minutes_label
+{
+	
+}
+.df .df_data .df_control_time .us_select
+{
+	width: 100px;
+	float: left;
+}
+
+/******** df_control_fileload ********/
+.df .df_data .df_control_fileload
+{
+	
+}
+.df .df_data .df_control_fileload .df_control_fileload_caption
+{
+	padding-bottom: 5px;
+	float: left;
+}
+.df .df_data .df_control_fileload .df_control_fileload_status
+{
+	float: right;
+	color: #008800;
+}
+.df .df_data .df_control_fileload .df_control_fileload_status.error
+{
+	color: #DD0000;
+}
+.df .df_data .df_control_fileload .df_control_fileload_value
+{
+	float: left;
+	width: 100%;
+	margin-right: -90px;
+}
+.df .df_data .df_control_fileload .df_control_fileload_wrapper
+{
+    padding: 5px;
+    height: 16px;
+    line-height: 16px;
+	background-color: #FFFFFF;
+	border: 1px solid #AAAAAA;
+	margin-right: 90px;
+}
+.df .df_data .df_control_fileload .df_control_fileload_button
+{
+	width: 80px;
+	float: right;
+}
+.df .df_data .df_control_fileload .df_control_fileload_button button
+{
+	width: 100%;
+}
+
+.df .df_data .df_control_fileload .df_control_fileload_content_input
+{
+	float: left;
+	margin-right: -110px;
+	width: 100%;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_wrapper
+{
+	border: 1px solid #AAAAAA;
+	background: #FFFFFF;
+	padding: 5px;
+	margin-right: 110px;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_input .customfile
+{
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_input .customfile-button 
+{
+	float: right;
+	font-size: 14px;
+	height: 16px;
+	line-height: 16px;
+	font-weight: bold;
+	text-align: center;
+	width: 25px;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_input .customfile-feedback 
+{
+	display: block;
+	line-height: 18px;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_submit
+{
+	width: 100px;
+	float: right;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_submit input
+{
+	background: #FFFFFF;
+	border: 1px solid #AAAAAA;
+	color: #845BA1;
+	cursor: pointer;
+	font: bold 12px Tahoma,Arial,Helvetica,sans-serif;
+	margin: 0;
+	outline: medium none;
+	overflow: hidden;
+	width: 100%;
+	height: 30px;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_submit input.disabled
+{
+	cursor: default;
+	border: 1px solid #AAAAAA;
+	color: #AAAAAA;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_submit input.hover
+{
+	border: 1px solid #845BA1;
+}
+.df .df_data .df_control_fileload .df_control_fileload_content_input .customfile-input
+{
+	background: transparent;
+	border: 0px;
+	cursor: pointer;
+	height: 100px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	z-index: 1;
+}
+.df .df_data .df_control--disabled .df_control_fileload_content_input .customfile-input
+{
+	cursor: default;
+}
+.df .df_data .df_control_fileload .df_control_fileload_process
+{
+	background: #FFFFFF;
+	margin-top: 5px;
+	height: 5px;
+	border: 1px solid #845BA1;
+}
+.df .df_data .df_control--disabled .df_control_fileload_process
+{
+	background: #FAFAFA;
+	border: 1px solid #AAAAAA;
+}
+.df .df_data .df_control_fileload .df_control_fileload_process_value
+{
+	width: 0%;
+	height: 5px;
+	background: #845BA1;
+}
+.df .df_data .df_control--disabled .df_control_fileload_process_value
+{
+	background: #AAAAAA;
+}
