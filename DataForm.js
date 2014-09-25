@@ -79,6 +79,7 @@
  *   controls: [{...},...] - Элменты управления формы (Описание зависит от типа (см. DataForm.ControlType))
  *   buttons:[{
  *     name    : String  - уникальное имя,
+ *     cancel  : Boolean - отображать кнопку в стиле Cancel-кнопки
  *     caption : String  - заголовок,
  *     hint    : String  - всплывающая подсказка,
  *     width   : Number  - ширина кнопки,
@@ -979,22 +980,10 @@ DataForm.Builder.prototype.appendCommandButton = function(button)
 	if (button.name === undefined)
 		throw new Error(control.kind + ' name is null');
 	
-	// Тип кнопки
-	var type = '';
-	switch (button.type)
-	{
-		case 1:
-			type = 'accept';
-			break;
-			
-		case 2:
-			type = 'cancel';
-			break;
-	}
-	
 	// Область кнопки
 	this.append('<div');
-		this.append(' class="' + DataForm.Builder.buttonCSS() + ' ' + type + '"');  
+		this.append(' class="' + DataForm.Builder.buttonCSS() +
+			(button.cancel ? ' ' + DataForm.Builder.buttonCSS() + '--cancel' : '') + '"');
 		this.append(' id="' + DataForm.Builder.buttonID(this._form_name, button.name) + '"');
 	// Ширина кнопки
 	if (button.width > 50)

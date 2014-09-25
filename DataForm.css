@@ -1,21 +1,14 @@
-/*******************************************************************************
-* ФОРМА ВВОДА И ОТОБРАЖЕНИ ИНФОРМАЦИИ
-*******************************************************************************/
 .df
 {
-	background: #FAFAFA;
 	height: 100%;
 	width: 100%;
-	/*overflow-y: auto;
-	overflow-x: hidden;*/
-	/* Т.к. в IE6-7 при прокрутке страницы дочерние relative-элементы остаются прилипшими
-	и перемещаются вместе с полосой прокуртки */
-	*position: relative;
-
     font-family: Tahoma,Arial,Helvetica,sans-serif;
     font-size: 12px;
 	cursor: default;
     line-height: 150%;
+
+    /* IE */
+	*position: relative;
 }
 
 .df button
@@ -83,11 +76,8 @@
 {
 	padding: 10px 0 0 0;
 	margin: 0;
-	/* Т.к. в IE6-7 мы определили для .df свойсто position-relative, то
-	необходимо указать его для всех контролов. В противном случе, могут возникнуть
-	перекрытия и т.п.
-	Смысл в том, что родителю, на который навели мышью, присваиваем z-index больше, 
-	чем у остальных контролов. */
+
+	/* IE */
 	*width: 100%;
 	*position: relative;
 }
@@ -567,21 +557,18 @@
 	margin: 0;
 	width: 100%;
 }
-.df .df_command_button.accept button
-{
-}
-.df .df_command_button.cancel
+.df .df_command_button--cancel
 {
 	width: auto;
 }
-.df .df_command_button.cancel button
+.df .df_command_button--cancel button
 {
 	width: auto;
 	border: none;
 	background: none;
 	outline: none;
 }
-.df .df_command_button.cancel button:hover
+.df .df_command_button--cancel button:hover
 {
 	text-decoration: underline;
 }
